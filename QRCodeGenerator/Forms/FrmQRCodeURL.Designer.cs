@@ -30,14 +30,14 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtURL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picImage = new System.Windows.Forms.PictureBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.oUcQRConfig = new QRCodeGenerator.ucQRConfig();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -63,14 +63,14 @@
             this.label1.Text = "Data";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtURL
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 23);
-            this.textBox1.TabIndex = 4;
+            this.txtURL.BackColor = System.Drawing.SystemColors.Info;
+            this.txtURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtURL.Location = new System.Drawing.Point(26, 95);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Size = new System.Drawing.Size(456, 23);
+            this.txtURL.TabIndex = 4;
             // 
             // label3
             // 
@@ -85,14 +85,14 @@
             this.label3.Text = "QRCode";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // picImage
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(524, 95);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 487);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picImage.Location = new System.Drawing.Point(524, 95);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(500, 487);
+            this.picImage.TabIndex = 6;
+            this.picImage.TabStop = false;
             // 
             // btnGenerate
             // 
@@ -103,6 +103,7 @@
             this.btnGenerate.TabIndex = 7;
             this.btnGenerate.Text = "Gerar QRCode";
             this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // btnClean
             // 
@@ -113,6 +114,7 @@
             this.btnClean.TabIndex = 8;
             this.btnClean.Text = "Limpar";
             this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // btnSave
             // 
@@ -123,6 +125,7 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // oUcQRConfig
             // 
@@ -140,9 +143,9 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picImage);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtURL);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.oUcQRConfig);
@@ -154,7 +157,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "QRCode URL";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmQRCodeURL_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,9 +169,9 @@
         private ucQRConfig oUcQRConfig;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picImage;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnSave;
