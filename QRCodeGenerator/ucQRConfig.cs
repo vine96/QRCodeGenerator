@@ -43,7 +43,7 @@ namespace QRCodeGenerator
 
             foreach (var item in values)
             {
-                cmbSize.Items.Add(item);
+                cmbECC.Items.Add(item);
             }
 
             //Color

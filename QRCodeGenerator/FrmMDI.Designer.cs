@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMDI));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUrlType = new System.Windows.Forms.Button();
-            this.btnTextType = new System.Windows.Forms.Button();
-            this.btnVCardType = new System.Windows.Forms.Button();
-            this.btnSmsType = new System.Windows.Forms.Button();
-            this.btnCallType = new System.Windows.Forms.Button();
-            this.btnGPSType = new System.Windows.Forms.Button();
-            this.btnEventType = new System.Windows.Forms.Button();
-            this.btnEmailType = new System.Windows.Forms.Button();
             this.btnWifiType = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.btnEmailType = new System.Windows.Forms.Button();
+            this.btnEventType = new System.Windows.Forms.Button();
+            this.btnGPSType = new System.Windows.Forms.Button();
+            this.btnCallType = new System.Windows.Forms.Button();
+            this.btnSmsType = new System.Windows.Forms.Button();
+            this.btnVCardType = new System.Windows.Forms.Button();
+            this.btnTextType = new System.Windows.Forms.Button();
+            this.btnUrlType = new System.Windows.Forms.Button();
+            this.pnlMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlMenu
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(2, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 646);
-            this.panel1.TabIndex = 1;
+            this.pnlMenu.Controls.Add(this.tableLayoutPanel1);
+            this.pnlMenu.Location = new System.Drawing.Point(2, 4);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(200, 646);
+            this.pnlMenu.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -83,89 +83,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 646);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnUrlType
+            // btnWifiType
             // 
-            this.btnUrlType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUrlType.Image = global::QRCodeGenerator.Properties.Resources.url;
-            this.btnUrlType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrlType.Location = new System.Drawing.Point(3, 3);
-            this.btnUrlType.Name = "btnUrlType";
-            this.btnUrlType.Size = new System.Drawing.Size(194, 65);
-            this.btnUrlType.TabIndex = 0;
-            this.btnUrlType.Text = "URL";
-            this.btnUrlType.UseVisualStyleBackColor = true;
-            // 
-            // btnTextType
-            // 
-            this.btnTextType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTextType.Image = global::QRCodeGenerator.Properties.Resources.text;
-            this.btnTextType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTextType.Location = new System.Drawing.Point(3, 74);
-            this.btnTextType.Name = "btnTextType";
-            this.btnTextType.Size = new System.Drawing.Size(194, 65);
-            this.btnTextType.TabIndex = 1;
-            this.btnTextType.Text = "Texto";
-            this.btnTextType.UseVisualStyleBackColor = true;
-            // 
-            // btnVCardType
-            // 
-            this.btnVCardType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVCardType.Image = global::QRCodeGenerator.Properties.Resources.vcard;
-            this.btnVCardType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVCardType.Location = new System.Drawing.Point(3, 145);
-            this.btnVCardType.Name = "btnVCardType";
-            this.btnVCardType.Size = new System.Drawing.Size(194, 65);
-            this.btnVCardType.TabIndex = 2;
-            this.btnVCardType.Text = "Contato";
-            this.btnVCardType.UseVisualStyleBackColor = true;
-            // 
-            // btnSmsType
-            // 
-            this.btnSmsType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSmsType.Image = global::QRCodeGenerator.Properties.Resources.sms;
-            this.btnSmsType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmsType.Location = new System.Drawing.Point(3, 216);
-            this.btnSmsType.Name = "btnSmsType";
-            this.btnSmsType.Size = new System.Drawing.Size(194, 65);
-            this.btnSmsType.TabIndex = 3;
-            this.btnSmsType.Text = "SMS";
-            this.btnSmsType.UseVisualStyleBackColor = true;
-            // 
-            // btnCallType
-            // 
-            this.btnCallType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCallType.Image = global::QRCodeGenerator.Properties.Resources.call;
-            this.btnCallType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCallType.Location = new System.Drawing.Point(3, 287);
-            this.btnCallType.Name = "btnCallType";
-            this.btnCallType.Size = new System.Drawing.Size(194, 65);
-            this.btnCallType.TabIndex = 4;
-            this.btnCallType.Text = "Chamada";
-            this.btnCallType.UseVisualStyleBackColor = true;
-            // 
-            // btnGPSType
-            // 
-            this.btnGPSType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnGPSType.Image = global::QRCodeGenerator.Properties.Resources.geolocalization;
-            this.btnGPSType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGPSType.Location = new System.Drawing.Point(3, 358);
-            this.btnGPSType.Name = "btnGPSType";
-            this.btnGPSType.Size = new System.Drawing.Size(194, 65);
-            this.btnGPSType.TabIndex = 5;
-            this.btnGPSType.Text = "Localização";
-            this.btnGPSType.UseVisualStyleBackColor = true;
-            // 
-            // btnEventType
-            // 
-            this.btnEventType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEventType.Image = global::QRCodeGenerator.Properties.Resources._event;
-            this.btnEventType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEventType.Location = new System.Drawing.Point(3, 429);
-            this.btnEventType.Name = "btnEventType";
-            this.btnEventType.Size = new System.Drawing.Size(194, 65);
-            this.btnEventType.TabIndex = 6;
-            this.btnEventType.Text = "Evento";
-            this.btnEventType.UseVisualStyleBackColor = true;
+            this.btnWifiType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnWifiType.Image = global::QRCodeGenerator.Properties.Resources.wifi;
+            this.btnWifiType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWifiType.Location = new System.Drawing.Point(3, 571);
+            this.btnWifiType.Name = "btnWifiType";
+            this.btnWifiType.Size = new System.Drawing.Size(194, 72);
+            this.btnWifiType.TabIndex = 8;
+            this.btnWifiType.Text = "Wifi";
+            this.btnWifiType.UseVisualStyleBackColor = true;
             // 
             // btnEmailType
             // 
@@ -179,24 +107,97 @@
             this.btnEmailType.Text = "Email";
             this.btnEmailType.UseVisualStyleBackColor = true;
             // 
-            // btnWifiType
+            // btnEventType
             // 
-            this.btnWifiType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnWifiType.Image = global::QRCodeGenerator.Properties.Resources.wifi;
-            this.btnWifiType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWifiType.Location = new System.Drawing.Point(3, 571);
-            this.btnWifiType.Name = "btnWifiType";
-            this.btnWifiType.Size = new System.Drawing.Size(194, 72);
-            this.btnWifiType.TabIndex = 8;
-            this.btnWifiType.Text = "Wifi";
-            this.btnWifiType.UseVisualStyleBackColor = true;
+            this.btnEventType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEventType.Image = global::QRCodeGenerator.Properties.Resources._event;
+            this.btnEventType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEventType.Location = new System.Drawing.Point(3, 429);
+            this.btnEventType.Name = "btnEventType";
+            this.btnEventType.Size = new System.Drawing.Size(194, 65);
+            this.btnEventType.TabIndex = 6;
+            this.btnEventType.Text = "Evento";
+            this.btnEventType.UseVisualStyleBackColor = true;
+            // 
+            // btnGPSType
+            // 
+            this.btnGPSType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGPSType.Image = global::QRCodeGenerator.Properties.Resources.geolocalization;
+            this.btnGPSType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGPSType.Location = new System.Drawing.Point(3, 358);
+            this.btnGPSType.Name = "btnGPSType";
+            this.btnGPSType.Size = new System.Drawing.Size(194, 65);
+            this.btnGPSType.TabIndex = 5;
+            this.btnGPSType.Text = "Localização";
+            this.btnGPSType.UseVisualStyleBackColor = true;
+            // 
+            // btnCallType
+            // 
+            this.btnCallType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCallType.Image = global::QRCodeGenerator.Properties.Resources.call;
+            this.btnCallType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCallType.Location = new System.Drawing.Point(3, 287);
+            this.btnCallType.Name = "btnCallType";
+            this.btnCallType.Size = new System.Drawing.Size(194, 65);
+            this.btnCallType.TabIndex = 4;
+            this.btnCallType.Text = "Chamada";
+            this.btnCallType.UseVisualStyleBackColor = true;
+            // 
+            // btnSmsType
+            // 
+            this.btnSmsType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSmsType.Image = global::QRCodeGenerator.Properties.Resources.sms;
+            this.btnSmsType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSmsType.Location = new System.Drawing.Point(3, 216);
+            this.btnSmsType.Name = "btnSmsType";
+            this.btnSmsType.Size = new System.Drawing.Size(194, 65);
+            this.btnSmsType.TabIndex = 3;
+            this.btnSmsType.Text = "SMS";
+            this.btnSmsType.UseVisualStyleBackColor = true;
+            // 
+            // btnVCardType
+            // 
+            this.btnVCardType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVCardType.Image = global::QRCodeGenerator.Properties.Resources.vcard;
+            this.btnVCardType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVCardType.Location = new System.Drawing.Point(3, 145);
+            this.btnVCardType.Name = "btnVCardType";
+            this.btnVCardType.Size = new System.Drawing.Size(194, 65);
+            this.btnVCardType.TabIndex = 2;
+            this.btnVCardType.Text = "Contato";
+            this.btnVCardType.UseVisualStyleBackColor = true;
+            // 
+            // btnTextType
+            // 
+            this.btnTextType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTextType.Image = global::QRCodeGenerator.Properties.Resources.text;
+            this.btnTextType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTextType.Location = new System.Drawing.Point(3, 74);
+            this.btnTextType.Name = "btnTextType";
+            this.btnTextType.Size = new System.Drawing.Size(194, 65);
+            this.btnTextType.TabIndex = 1;
+            this.btnTextType.Text = "Texto";
+            this.btnTextType.UseVisualStyleBackColor = true;
+            // 
+            // btnUrlType
+            // 
+            this.btnUrlType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUrlType.Image = global::QRCodeGenerator.Properties.Resources.url;
+            this.btnUrlType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrlType.Location = new System.Drawing.Point(3, 3);
+            this.btnUrlType.Name = "btnUrlType";
+            this.btnUrlType.Size = new System.Drawing.Size(194, 65);
+            this.btnUrlType.TabIndex = 0;
+            this.btnUrlType.Text = "URL";
+            this.btnUrlType.UseVisualStyleBackColor = true;
+            this.btnUrlType.Click += new System.EventHandler(this.btnUrlType_Click);
             // 
             // FrmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1432, 654);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -205,7 +206,7 @@
             this.Text = "QRCode Generator";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMDI_Load);
-            this.panel1.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -213,7 +214,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnWifiType;
         private System.Windows.Forms.Button btnEmailType;

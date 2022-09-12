@@ -48,6 +48,12 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmQRCodeURL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQRCodeURL.Designer.cs">
+      <DependentUpon>FrmQRCodeURL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="ucQRConfig.Designer.cs">
       <DependentUpon>ucQRConfig.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmQRCodeURL.resx">
+      <DependentUpon>FrmQRCodeURL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
     </EmbeddedResource>
