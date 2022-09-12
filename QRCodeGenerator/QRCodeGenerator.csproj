@@ -121,5 +121,15 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{b9f3c88e-f6be-4c90-957f-2c102a18851f}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QRCode.Net\QRCode.Net.csproj">
+      <Project>{6f626cb2-6965-4591-8b28-b5cc49add82c}</Project>
+      <Name>QRCode.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
