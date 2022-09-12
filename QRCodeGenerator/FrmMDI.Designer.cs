@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMDI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnUrlType = new System.Windows.Forms.Button();
+            this.btnTextType = new System.Windows.Forms.Button();
+            this.btnVCardType = new System.Windows.Forms.Button();
+            this.btnSmsType = new System.Windows.Forms.Button();
+            this.btnCallType = new System.Windows.Forms.Button();
+            this.btnGPSType = new System.Windows.Forms.Button();
+            this.btnEventType = new System.Windows.Forms.Button();
+            this.btnEmailType = new System.Windows.Forms.Button();
+            this.btnWifiType = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,15 +58,15 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.button9, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.button8, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.button7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.button6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnWifiType, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnEmailType, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnEventType, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnGPSType, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnCallType, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnSmsType, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnVCardType, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnTextType, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnUrlType, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -83,95 +83,113 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 646);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // btnUrlType
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 65);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUrlType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUrlType.Image = global::QRCodeGenerator.Properties.Resources.url;
+            this.btnUrlType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrlType.Location = new System.Drawing.Point(3, 3);
+            this.btnUrlType.Name = "btnUrlType";
+            this.btnUrlType.Size = new System.Drawing.Size(194, 65);
+            this.btnUrlType.TabIndex = 0;
+            this.btnUrlType.Text = "URL";
+            this.btnUrlType.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnTextType
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 65);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTextType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTextType.Image = global::QRCodeGenerator.Properties.Resources.text;
+            this.btnTextType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTextType.Location = new System.Drawing.Point(3, 74);
+            this.btnTextType.Name = "btnTextType";
+            this.btnTextType.Size = new System.Drawing.Size(194, 65);
+            this.btnTextType.TabIndex = 1;
+            this.btnTextType.Text = "Texto";
+            this.btnTextType.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnVCardType
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 65);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnVCardType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVCardType.Image = global::QRCodeGenerator.Properties.Resources.vcard;
+            this.btnVCardType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVCardType.Location = new System.Drawing.Point(3, 145);
+            this.btnVCardType.Name = "btnVCardType";
+            this.btnVCardType.Size = new System.Drawing.Size(194, 65);
+            this.btnVCardType.TabIndex = 2;
+            this.btnVCardType.Text = "Contato";
+            this.btnVCardType.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSmsType
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 216);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 65);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSmsType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSmsType.Image = global::QRCodeGenerator.Properties.Resources.sms;
+            this.btnSmsType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSmsType.Location = new System.Drawing.Point(3, 216);
+            this.btnSmsType.Name = "btnSmsType";
+            this.btnSmsType.Size = new System.Drawing.Size(194, 65);
+            this.btnSmsType.TabIndex = 3;
+            this.btnSmsType.Text = "SMS";
+            this.btnSmsType.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnCallType
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(3, 287);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(194, 65);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCallType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCallType.Image = global::QRCodeGenerator.Properties.Resources.call;
+            this.btnCallType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCallType.Location = new System.Drawing.Point(3, 287);
+            this.btnCallType.Name = "btnCallType";
+            this.btnCallType.Size = new System.Drawing.Size(194, 65);
+            this.btnCallType.TabIndex = 4;
+            this.btnCallType.Text = "Chamada";
+            this.btnCallType.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnGPSType
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(3, 358);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(194, 65);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGPSType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGPSType.Image = global::QRCodeGenerator.Properties.Resources.geolocalization;
+            this.btnGPSType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGPSType.Location = new System.Drawing.Point(3, 358);
+            this.btnGPSType.Name = "btnGPSType";
+            this.btnGPSType.Size = new System.Drawing.Size(194, 65);
+            this.btnGPSType.TabIndex = 5;
+            this.btnGPSType.Text = "Localização";
+            this.btnGPSType.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnEventType
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Location = new System.Drawing.Point(3, 429);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(194, 65);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnEventType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEventType.Image = global::QRCodeGenerator.Properties.Resources._event;
+            this.btnEventType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEventType.Location = new System.Drawing.Point(3, 429);
+            this.btnEventType.Name = "btnEventType";
+            this.btnEventType.Size = new System.Drawing.Size(194, 65);
+            this.btnEventType.TabIndex = 6;
+            this.btnEventType.Text = "Evento";
+            this.btnEventType.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnEmailType
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Location = new System.Drawing.Point(3, 500);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(194, 65);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnEmailType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEmailType.Image = global::QRCodeGenerator.Properties.Resources.email;
+            this.btnEmailType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmailType.Location = new System.Drawing.Point(3, 500);
+            this.btnEmailType.Name = "btnEmailType";
+            this.btnEmailType.Size = new System.Drawing.Size(194, 65);
+            this.btnEmailType.TabIndex = 7;
+            this.btnEmailType.Text = "Email";
+            this.btnEmailType.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnWifiType
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(3, 571);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(194, 72);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnWifiType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnWifiType.Image = global::QRCodeGenerator.Properties.Resources.wifi;
+            this.btnWifiType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWifiType.Location = new System.Drawing.Point(3, 571);
+            this.btnWifiType.Name = "btnWifiType";
+            this.btnWifiType.Size = new System.Drawing.Size(194, 72);
+            this.btnWifiType.TabIndex = 8;
+            this.btnWifiType.Text = "Wifi";
+            this.btnWifiType.UseVisualStyleBackColor = true;
             // 
             // FrmMDI
             // 
@@ -197,15 +215,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnWifiType;
+        private System.Windows.Forms.Button btnEmailType;
+        private System.Windows.Forms.Button btnEventType;
+        private System.Windows.Forms.Button btnGPSType;
+        private System.Windows.Forms.Button btnCallType;
+        private System.Windows.Forms.Button btnSmsType;
+        private System.Windows.Forms.Button btnVCardType;
+        private System.Windows.Forms.Button btnTextType;
+        private System.Windows.Forms.Button btnUrlType;
     }
 }
 
