@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QRCodeGenerator
 {
-    public partial class Form1 : Form
+    public partial class FrmMDI : Form
     {
-        public Form1()
+        public FrmMDI()
         {
             InitializeComponent();
+        }
+
+        private void FrmMDI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
