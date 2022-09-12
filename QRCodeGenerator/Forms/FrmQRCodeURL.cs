@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Entities.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +14,7 @@ namespace QRCodeGenerator.Forms
 {
     public partial class FrmQRCodeURL : Form
     {
-        private Image _imgQRCode;
+        //private Image _imgQRCode;
         private string _format;
         public FrmQRCodeURL()
         {
@@ -21,13 +23,27 @@ namespace QRCodeGenerator.Forms
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            if (txtURL.Text.Trim().Equals(string.Empty))
+            {
+                MessageBox.Show("Atenção\n\nVocê precisa informar uma URL.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (!txtURL.Text.Trim().Contains("http://") && !txtURL.Text.Trim().Contains("https://"))
+            {
+                MessageBox.Show("Atenção\n\nDigite uma URL válida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            QRConfig config = new QRConfig();
+            string strData = WebUtility.UrlEncode(txtURL.Text.Trim());
+            _format = config.Format;
 
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
             _format = string.Empty;
-            _imgQRCode = null;
+            //_imgQRCode = null;
             txtURL.Clear();
             //picImage.BackgroundImage = null;
             oUcQRConfig.setDefaultOptions();
