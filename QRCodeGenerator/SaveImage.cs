@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace QRCodeGenerator
@@ -35,6 +32,25 @@ namespace QRCodeGenerator
             sfDialog.InitialDirectory = @"C:\Users\vinic\Pictures\QRCodes";
 
             sfDialog.ShowDialog();
+
+            if (!sfDialog.FileName.Equals(string.Empty))
+            {
+                FileStream fs = (FileStream)sfDialog.OpenFile();
+                if (format.Equals("png"))
+                {
+                    imgQRCode.Save(fs, ImageFormat.Png);
+                }
+                else if (format.Equals("gif"))
+                {
+                    imgQRCode.Save(fs, ImageFormat.Gif);
+                }
+                else
+                {
+                    imgQRCode.Save(fs, ImageFormat.Jpeg);
+                }
+
+                fs.Close();
+            }
         }
     }
 }

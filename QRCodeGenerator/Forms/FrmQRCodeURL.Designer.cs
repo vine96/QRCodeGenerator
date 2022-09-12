@@ -87,6 +87,7 @@
             // 
             // picImage
             // 
+            this.picImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picImage.Location = new System.Drawing.Point(524, 95);
             this.picImage.Name = "picImage";

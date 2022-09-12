@@ -29,13 +29,14 @@ namespace QRCodeGenerator.Forms
             _format = string.Empty;
             _imgQRCode = null;
             txtURL.Clear();
-            picImage.BackgroundImage = null;
+            //picImage.BackgroundImage = null;
             oUcQRConfig.setDefaultOptions();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveImage.Save(_imgQRCode, _format);
+            //SaveImage.Save(_imgQRCode, _format);
+            SaveImage.Save(picImage.BackgroundImage, _format);
         }
 
         private void FrmQRCodeURL_Load(object sender, EventArgs e)
