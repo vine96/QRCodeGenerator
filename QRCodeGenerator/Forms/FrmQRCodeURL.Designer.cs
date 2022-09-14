@@ -135,6 +135,7 @@
             this.oUcQRConfig.Name = "oUcQRConfig";
             this.oUcQRConfig.Size = new System.Drawing.Size(500, 445);
             this.oUcQRConfig.TabIndex = 0;
+            this.oUcQRConfig.Load += new System.EventHandler(this.oUcQRConfig_Load);
             // 
             // FrmQRCodeURL
             // 

@@ -1,20 +1,15 @@
 ﻿using Entities.Settings;
+using GoQRCode.Net;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QRCodeGenerator.Forms
 {
     public partial class FrmQRCodeURL : Form
     {
-        //private Image _imgQRCode;
+        private Image _imgQRCode;
         private string _format;
         public FrmQRCodeURL()
         {
@@ -34,30 +29,41 @@ namespace QRCodeGenerator.Forms
                 return;
             }
 
-            QRConfig config = new QRConfig();
+            QRConfig config = oUcQRConfig.GetConfig();
             string strData = WebUtility.UrlEncode(txtURL.Text.Trim());
             _format = config.Format;
-
+            _imgQRCode = new GoQRCode.Net.GoQRCode().GetQRCode(strData, config);
+            if (_imgQRCode != null)
+            {
+                picImage.BackgroundImage = _imgQRCode;
+                picImage.BackgroundImageLayout = ImageLayout.Stretch;
+                btnSave.Enabled = true;
+            }
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
+            btnSave.Enabled = false;
             _format = string.Empty;
-            //_imgQRCode = null;
+            _imgQRCode = null;
             txtURL.Clear();
-            //picImage.BackgroundImage = null;
+            picImage.BackgroundImage = null;
             oUcQRConfig.setDefaultOptions();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //SaveImage.Save(_imgQRCode, _format);
-            SaveImage.Save(picImage.BackgroundImage, _format);
+            SaveImage.Save(_imgQRCode, _format);
         }
 
         private void FrmQRCodeURL_Load(object sender, EventArgs e)
         {
             btnClean_Click(btnClean, new EventArgs());
+        }
+
+        private void oUcQRConfig_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

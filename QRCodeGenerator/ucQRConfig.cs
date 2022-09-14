@@ -125,5 +125,10 @@ namespace QRCodeGenerator
         {
 
         }
+
+        private void cmbFormat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

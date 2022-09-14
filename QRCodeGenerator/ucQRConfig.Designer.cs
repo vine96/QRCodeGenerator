@@ -166,6 +166,7 @@
             this.cmbFormat.Name = "cmbFormat";
             this.cmbFormat.Size = new System.Drawing.Size(200, 21);
             this.cmbFormat.TabIndex = 19;
+            this.cmbFormat.SelectedIndexChanged += new System.EventHandler(this.cmbFormat_SelectedIndexChanged);
             // 
             // label9
             // 

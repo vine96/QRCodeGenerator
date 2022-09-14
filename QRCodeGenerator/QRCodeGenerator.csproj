@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
@@ -88,6 +91,7 @@
     <EmbeddedResource Include="ucQRConfig.resx">
       <DependentUpon>ucQRConfig.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,9 +140,9 @@
       <Project>{b9f3c88e-f6be-4c90-957f-2c102a18851f}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QRCode.Net\QRCode.Net.csproj">
-      <Project>{6f626cb2-6965-4591-8b28-b5cc49add82c}</Project>
-      <Name>QRCode.Net</Name>
+    <ProjectReference Include="..\GoQRCode.Net\GoQRCode.Net.csproj">
+      <Project>{c14c7951-4a7b-45fa-a2e4-2dffaa4765ac}</Project>
+      <Name>GoQRCode.Net</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
